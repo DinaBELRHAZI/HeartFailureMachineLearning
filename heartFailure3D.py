@@ -5,7 +5,9 @@ import pandas as pd
 import plotly.express as px
 
 # Read Data
-df = pd.read_csv('heart.csv')
+
+toto = pd.read_csv('heart.csv')
+df = toto
 
 print(df.head())
 
@@ -70,17 +72,20 @@ data["ST_Slope"] = label_STSlope
 # Affiche les 5 premières lignes du tableu data
 print("\n", data.head(5))
 
+
 # plot = px.scatter_3d(data, x='Age',
 #                      y='FastingBS',
 #                      z='Sex',
 #                      color='HeartDisease')
-#
+# plot.update_layout(template="plotly_dark")
 # plot.show()
 
 plot = px.scatter_3d(data, x='Age',
                      y='RestingECG',
                      z='Oldpeak',
-                     color='HeartDisease', symbol='ExerciseAngina',
+                     color='HeartDisease', symbol='HeartDisease',
                      opacity=1)
-plot.update_layout(template="plotly_dark", margin=dict(l=5, r=0, b=0, t=10))
+plot.update_layout(template="plotly_dark")
 plot.show()
+
+

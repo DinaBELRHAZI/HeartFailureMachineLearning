@@ -9,6 +9,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 import seaborn as sns
 from graphviz import Source
+
+
+# Installation graphviz : choco install graphviz
+
+
 import plotly.express as px
 from sklearn.tree import export_graphviz
 
@@ -17,6 +22,15 @@ from sklearn.tree import export_graphviz
 
 from IPython.display import Image
 import pydotplus
+
+
+
+
+
+
+
+
+
 
 # Informations sur les attributs :
 
