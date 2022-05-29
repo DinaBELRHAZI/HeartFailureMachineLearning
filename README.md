@@ -47,6 +47,9 @@ Les variables :
 - HeartDisease : classe de sortie 
   1. 1 : maladie cardiaque 
   2. 0 : normal
+  
+  
+  <br><br>
 
 ### Représentations des corrélations des variables 
 
@@ -56,6 +59,8 @@ Voici celle qui nous interesse :
 
 ![heatmap](img/heatmap.png)
 
+<br>
+
 ### Représentation en 3D  
 
 Cette représentation en 3D permet de voir de manière plus évidante les personnes malades en fonction de trois variables.
@@ -64,6 +69,7 @@ Ainsi, dans cet exemple, nous pouvons observer que la majorité des personnes at
 
 ![plan-3D](img/plan_3D.png)
 
+<br><br> 
 ## Analyse des prédictions
 
 ### Matrice de confusion
@@ -79,6 +85,7 @@ Celle ci-dessous indique que :
 
 ![matrice-confusion](img/matrice-confusion.png)
 
+<br>
 
 ### Entrainements et tests de prédictions
 
@@ -91,13 +98,15 @@ L' ensemble  d'apprentissage  devrait être les 20 % restants.
 
 ![Y](img/y-train-y-test.png)
 
-
+<br>
 
 ###  Régression logistique
 
 ![Logistic-regression-prediction](img/Logistic-regression-prediction.png)
 
 Résultat : 80% des prédictions sont bonnes.
+
+<br>
 
 ### Arbre de decision
 
