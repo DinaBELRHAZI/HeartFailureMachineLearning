@@ -4,7 +4,9 @@
 
 1. Téléchargez le projet
 2. Installez les plugins 
-3. Lancez la commande "choco install graphviz" dans un powerShell (Administrateur) puis redémarrez votre pc 
+3. Installez chocolatey :
+   - Ouvrez un PowerShell en tant qu'Administrateur et lancez cette commande "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+5. Lancez la commande "choco install graphviz"  puis redémarrez votre pc 
 
 
 ## Etude des correlations entre plusieurs variables
@@ -48,31 +50,61 @@ Les variables :
 
 ### Représentations des corrélations des variables 
 
-Voici quelques exemples :
+Les cartes thermiques de corrélation peuvent être utilisées pour trouver des relations linéaires et non linéaires entre les variables.
 
+Voici celle qui nous interesse :
+
+![heatmap](img/heatmap.png)
 
 ### Représentation en 3D  
 
+Cette représentation en 3D permet de voir de manière plus évidante les personnes malades en fonction de trois variables.
+Ainsi, dans cet exemple, nous pouvons observer que la majorité des personnes atteintes d'une maladie cardiaque sont âgées entre
+40 et 70 ans, leur pente du segment ST du pic d'exercice est plate et ont une angine de poitrine induite par l'exercice.
+
+![plan-3D](img/plan_3D.png)
 
 ## Analyse des prédictions
 
-Calculer la matrice de confusion pour évaluer la précision d'une classification.
+### Matrice de confusion
+
+Le calcul de la matrice de confusion permet d'évaluer la précision d'une classification.
+
+Celle ci-dessous indique que :
+  1. 262 cas sont de vrais négatifs
+  2. 82 cas sont de faux négatifs
+  3. 332 cas sont de vrais positifs
+  4. 59 cas sont de faux positifs
+
+
 ![matrice-confusion](img/matrice-confusion.png)
 
 
+### Entrainements et tests de prédictions
+
+Train/Test est une méthode pour mesurer la précision de votre modèle.
+
+L' ensemble de test doit être une sélection aléatoire de 80 % des données d'origine.
+L' ensemble  d'apprentissage  devrait être les 20 % restants.
 
 ![X](img/x-train-X-test.png)
 
 ![Y](img/y-train-y-test.png)
 
 
+
+###  Régression logistique
+
 ![Logistic-regression-prediction](img/Logistic-regression-prediction.png)
 
+Résultat : 80% des prédictions sont bonnes.
+
+### Arbre de decision
+
 ![Arbre-decision](dtree_render.png)
+
 ![Arbre-decision-prediction](img/arbre-decision-prediction.png)
 
-## Résutats
-
-
+Résultat : 70% des prédictions sont bonnes.
 
 

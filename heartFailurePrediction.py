@@ -118,6 +118,7 @@ data = data[['Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak',
              'ExerciseAngina', 'ST_Slope', 'HeartDisease']]
 print("\n", data.head(5))
 
+# Matrice permettant de voir une possible corrélation entre chaque élément
 plt.figure(figsize=(15, 10))
 sns.heatmap(data.corr(), annot=True)
 plt.show()
@@ -176,7 +177,6 @@ preds = pun.predict(X_test)
 print(pun.score(X_test, y_test) * 100, " % des prédictions faites sont bonnes !")
 
 # Confusion Matrix
-
 y_pred = pun.predict(X_test)
 cf_matrix = confusion_matrix(y_test, y_pred)
 # print(cf_matrix)

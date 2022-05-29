@@ -81,8 +81,8 @@ print("\n", data.head(5))
 # plot.show()
 
 plot = px.scatter_3d(data, x='Age',
-                     y='RestingECG',
-                     z='Oldpeak',
+                     y='ExerciseAngina',
+                     z='ST_Slope',
                      color='HeartDisease', symbol='HeartDisease',
                      opacity=1)
 plot.update_layout(template="plotly_dark")

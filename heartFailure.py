@@ -98,7 +98,7 @@ for f in numerical_data_continuous:
 
 # ----------------------------------
 
-
+# Matrice permettant de voir une possible corrélation entre chaque élément
 plt.figure(figsize=(15, 10))
 sns.heatmap(df.corr(), annot=True)
 plt.show()
